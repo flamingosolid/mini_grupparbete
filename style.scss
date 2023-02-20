@@ -36,9 +36,64 @@ html {
       img {
         max-width: 50vw;
         height: 100vh;
+        object-fit: cover;
+      }
+      .button-mobile {
+        display: none;
       }
     }
   }
+
+  @media only screen and (max-width: 420px) {
+    .landing-page {
+      margin: 0.3rem auto 0;
+      .text {
+        display: none;
+      }
+      .background-img {
+        img {
+          position: relative;
+          max-width: 98vw;
+          object-fit: cover;
+        }
+        .button-mobile {
+          display: block;
+          position: absolute;
+          top: 60%;
+          left: 39vw;
+        }
+      }
+    }
+
+    nav {
+      margin: 0 0.3rem;
+      max-width: 100vw;
+      .team-name {
+        display: none;
+      }
+      .links {
+        margin: 0 auto;
+      }
+    }
+    .visual-code {
+      margin: 0 0.3rem;
+      .code-img {
+        h1 {
+          text-align: center;
+        }
+      }
+      .fetch-result {
+        h1 {
+          text-align: center;
+        }
+      }
+    }
+    footer {
+      margin: 0 0.3rem;
+      max-width: 100vw;
+    }
+  }
+
   nav {
     grid-area: nav;
     background: rgba(0, 0, 0, 0.5);
@@ -175,7 +230,8 @@ html {
   }
 }
 
-.button-33 {
+.button-33,
+.button-mobile {
   background-color: #c2fbd7;
   border-radius: 100px;
   box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
@@ -197,7 +253,8 @@ html {
   touch-action: manipulation;
 }
 
-.button-33:hover {
+.button-33:hover,
+.button-mobile:hover {
   box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
     rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
     rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
