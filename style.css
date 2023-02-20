@@ -17,10 +17,69 @@ body {
 }
 .container .team-p {
   grid-area: team-p;
+  background-color: rgb(245, 176, 72);
 }
 .container .visual-code {
   grid-area: code;
 }
 .container footer {
   grid-area: footer;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* Team - members start */
+.name {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
+  overflow: hidden;
+}
+
+.Alexander {
+  width: 33%;
+  height: 50vh;
+}
+
+.Emma {
+  width: 33%;
+  height: 50vh;
+}
+
+.Josef {
+  width: 33%;
+  height: 50vh;
+}
+
+.greybox {
+  width: 0%;
+  height: 50vh;
+  position: absolute;
+  left: 0.5%;
+  background-color: rgba(255, 231, 14, 0.842);
+  transition: all 1s ease-in-out;
+}
+
+.greybox2 {
+  width: 0%;
+  height: 50vh;
+  position: absolute;
+  left: 33.5%;
+  background-color: rgba(255, 231, 14, 0.842);
+  transition: all 1s ease-in-out;
+}
+
+.greybox3 {
+  width: 0%;
+  height: 50vh;
+  position: absolute;
+  left: 66.5%;
+  background-color: rgba(255, 231, 14, 0.842);
+  transition: all 1s ease-in-out;
+}
+
+.click {
+  width: 33%;
+}
+
+/* Team - members stop *//*# sourceMappingURL=style.css.map */
