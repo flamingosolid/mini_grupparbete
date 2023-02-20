@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  width: 100vw;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "l-page "
+    "nav "
+    "team-p "
+    "code "
+    "footer";
+  .landing-page {
+    grid-area: l-page;
+  }
+  nav {
+    grid-area: nav;
+  }
+  .team-p {
+    grid-area: team-p;
+  }
+  .visual-code {
+    grid-area: code;
+  }
+  footer {
+    grid-area: footer;
+  }
+}
