@@ -65,28 +65,18 @@ buttonPrev.onclick = () => {
   checkStatus();
 };
 
-const alexander = document.querySelector(".Alexander");
-const emma = document.querySelector(".Emma");
-const josef = document.querySelector(".Josef");
-const greybox = document.querySelector(".greybox");
-const greybox2 = document.querySelector(".greybox2");
-const greybox3 = document.querySelector(".greybox3");
+//team Start
+const personBild = document.querySelectorAll(".name .person");
 
-alexander.addEventListener("click", function () {
-  greybox.classList.toggle("click");
+personBild.forEach((person) => {
+  const bild = person.querySelector("img");
+  const greyBox = person.querySelector(".greybox");
+  bild.addEventListener("click", function () {
+    greyBox.classList.toggle("click");
+  });
+  greyBox.addEventListener("click", function () {
+    greyBox.classList.toggle("click");
+  });
 });
-emma.addEventListener("click", function () {
-  greybox2.classList.toggle("click");
-});
-josef.addEventListener("click", function () {
-  greybox3.classList.toggle("click");
-});
-greybox.addEventListener("click", function () {
-  greybox.classList.toggle("click");
-});
-greybox2.addEventListener("click", function () {
-  greybox2.classList.toggle("click");
-});
-greybox3.addEventListener("click", function () {
-  greybox3.classList.toggle("click");
-});
+
+//Team Stop
