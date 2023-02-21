@@ -46,8 +46,6 @@ html {
   }
 
   nav {
-    margin: 0 0.3rem;
-    max-width: 100vw;
     .team-name {
       display: none;
     }
@@ -56,7 +54,6 @@ html {
     }
   }
   #visual-code {
-    margin: 0 0.3rem;
     .code-img {
       h1 {
         text-align: center;
@@ -70,10 +67,6 @@ html {
         text-align: center;
       }
     }
-  }
-  footer {
-    margin: 0 0.3rem;
-    max-width: 100vw;
   }
 
   nav {
@@ -138,7 +131,7 @@ html {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #79c2d0;
+      background-color: #54877a;
     }
 
     .code-img img {
@@ -155,10 +148,11 @@ html {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #bbe4e9;
-      .character h2 {
-        color: #5585b5;
+      background-color: #3fe8b2;
+      .character h1 {
+        color: #54877a;
         font-family: Lucida Sans Typewriter;
+        font-size: 40px;
       }
       .image img {
         border-radius: 10px;
@@ -173,7 +167,7 @@ html {
         .next {
           padding: 0.5rem 1rem;
           cursor: pointer;
-          background-color: #5585b5;
+          background-color: #51897c;
           border: none;
           color: white;
           border-radius: 5px;
@@ -182,7 +176,7 @@ html {
         }
         .prev {
           cursor: pointer;
-          background-color: #53a8b6;
+          background-color: #82ad8d;
           color: white;
           border: none;
           border-radius: 5px;
@@ -289,17 +283,30 @@ html {
   }
 }
 
+#code-img2 {
+  grid-area: code2;
+  display: none;
+}
+
 @media only screen and (max-width: 720px) {
   .container {
+    grid-template-areas:
+      "l-page"
+      "nav"
+      "code"
+      "code2"
+      "team-p"
+      "footer";
+
     #landing-page {
-      margin: 0.3rem auto 0;
+      // margin: 0 0.3rem;
       .text {
         display: none;
       }
       .background-img {
         img {
           position: relative;
-          width: 98vw;
+          width: 100vw;
           object-fit: cover;
         }
         .button-mobile {
@@ -310,88 +317,76 @@ html {
         }
       }
     }
-
+    nav {
+      .team-name {
+        display: none;
+      }
+      .links {
+        margin: 0 auto;
+      }
+    }
+    #visual-code {
+      width: 100vw;
+      margin: 0;
+      .code-img {
+        display: none;
+      }
+      .fetch-result {
+        width: 100%;
+        .buttons {
+          margin: 0 0.5rem;
+          .prev {
+            font-size: 1.2rem;
+            text-align: center;
+          }
+          .next {
+            font-size: 1.2rem;
+            text-align: center;
+          }
+          .showCode {
+            display: block;
+            background-color: #acbb88;
+            color: White;
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: Comic Sans MS;
+            text-align: center;
+          }
+        }
+      }
+    }
     #code-img2 {
-      grid-area: code2;
-      display: none;
+      // margin: 0 0.3rem;
+      width: 100vw;
+      background-color: #54877a;
+      display: block;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      .box {
+        height: 400px;
+        width: 400px;
+        img {
+          width: 100%;
+        }
+      }
     }
 
-    @media only screen and (max-width: 720px) {
-      .container {
-        grid-template-areas:
-          "l-page"
-          "nav"
-          "code"
-          "code2"
-          "team-p"
-          "footer";
-
-        nav {
-          margin: 0 0.3rem;
-          max-width: 100vw;
-          .team-name {
-            display: none;
-          }
-          .links {
-            margin: 0 auto;
-          }
-        }
-        #visual-code {
-          .code-img {
-            display: none;
-          }
-          .fetch-result {
-            width: 100%;
-            .buttons {
-              .prev {
-                font-size: 0.8rem;
-              }
-              .next {
-                font-size: 0.8rem;
-              }
-              .showCode {
-                display: block;
-                background-color: blue;
-                color: White;
-                display: flex;
-                align-items: center;
-                font-size: 0.9rem;
-                padding: 1rem 1.5rem;
-                border-radius: 5px;
-                text-decoration: none;
-                font-family: Comic Sans MS;
-              }
-            }
-          }
-        }
-        #code-img2 {
-          background-color: #79c2d0;
-          display: block;
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-content: center;
-          align-items: center;
-          .box {
-            height: 400px;
-            width: 400px;
-            img {
-              width: 100%;
-            }
-          }
-        }
-
-        #team-p {
-          margin: 0 0.3rem;
-          width: 98vw;
-          .name {
-            flex-direction: column;
-            gap: 2rem;
-            .person {
-              width: 60vw;
-              margin: 0 auto;
-            }
-          }
+    #team-p {
+      // margin: 0 0.3rem;
+      width: 100vw;
+      .name {
+        flex-direction: column;
+        gap: 2rem;
+        .person {
+          width: 60vw;
+          margin: 0 auto;
         }
       }
     }
