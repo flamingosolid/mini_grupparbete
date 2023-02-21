@@ -242,7 +242,7 @@ html {
       rgba(22, 173, 80, 0.26) 0 16px 32px;
     transform: scale(1.2);
   }
-
+}
 .name {
   display: flex;
   justify-content: space-between;
@@ -273,7 +273,8 @@ html {
         width: 100%;
       }
     }
-
+  }
+}
 @media only screen and (max-width: 720px) {
   .container {
     .landing-page {
