@@ -20,21 +20,23 @@ html {
 
   #landing-page {
     grid-area: l-page;
-    display: flex;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     .text {
       height: 100vh;
-      background-color: peru;
+      background-color: #61133a;
       margin: 0 auto;
       width: 50vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: #7cbc6c;
+      text-shadow: 0px 2px 5px #69ad53;
     }
     .background-img {
       img {
-        max-width: 50vw;
+        width: 50vw;
         height: 100vh;
         object-fit: cover;
       }
@@ -44,54 +46,32 @@ html {
     }
   }
 
-  @media only screen and (max-width: 420px) {
-    .landing-page {
-      margin: 0.3rem auto 0;
-      .text {
-        display: none;
-      }
-      .background-img {
-        img {
-          position: relative;
-          max-width: 98vw;
-          object-fit: cover;
-        }
-        .button-mobile {
-          display: block;
-          position: absolute;
-          top: 60%;
-          left: 39vw;
-        }
+  nav {
+    margin: 0 0.3rem;
+    max-width: 100vw;
+    .team-name {
+      display: none;
+    }
+    .links {
+      margin: 0 auto;
+    }
+  }
+  #visual-code {
+    margin: 0 0.3rem;
+    .code-img {
+      h1 {
+        text-align: center;
       }
     }
-
-    nav {
-      margin: 0 0.3rem;
-      max-width: 100vw;
-      .team-name {
-        display: none;
-      }
-      .links {
-        margin: 0 auto;
+    .fetch-result {
+      h1 {
+        text-align: center;
       }
     }
-    .visual-code {
-      margin: 0 0.3rem;
-      .code-img {
-        h1 {
-          text-align: center;
-        }
-      }
-      .fetch-result {
-        h1 {
-          text-align: center;
-        }
-      }
-    }
-    footer {
-      margin: 0 0.3rem;
-      max-width: 100vw;
-    }
+  }
+  footer {
+    margin: 0 0.3rem;
+    max-width: 100vw;
   }
 
   nav {
@@ -229,39 +209,39 @@ html {
       }
     }
   }
-}
 
-.button-33,
-.button-mobile {
-  background-color: #c2fbd7;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
-    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
-    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
-    rgba(44, 187, 99, 0.15) 0 16px 32px;
-  color: green;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-  padding: 7px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
+  .button-33,
+  .button-mobile {
+    background-color: #1098b9;
+    border-radius: 100px;
+    box-shadow: rgba(14, 221, 93, 0.315) 0 -25px 18px -14px inset,
+      rgba(21, 202, 90, 0.329) 0 1px 2px, rgba(17, 223, 96, 0.253) 0 2px 4px,
+      rgba(20, 190, 85, 0.24) 0 4px 8px, rgba(22, 185, 84, 0.281) 0 8px 16px,
+      rgba(21, 182, 83, 0.233) 0 16px 32px;
+    color: 7cbc6c;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto,
+      sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
 
-.button-33:hover,
-.button-mobile:hover {
-  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
-    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
-    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
-    rgba(44, 187, 99, 0.25) 0 16px 32px;
-  transform: scale(1.2);
-}
+  .button-33:hover,
+  .button-mobile:hover {
+    box-shadow: rgba(26, 201, 93, 0.479) 0 -25px 18px -14px inset,
+      rgba(23, 170, 79, 0.212) 0 1px 2px, rgba(24, 201, 92, 0.199) 0 2px 4px,
+      rgba(23, 179, 83, 0.219) 0 4px 8px, rgba(23, 173, 80, 0.219) 0 8px 16px,
+      rgba(22, 173, 80, 0.26) 0 16px 32px;
+    transform: scale(1.2);
+  }
 
 .name {
   display: flex;
@@ -291,6 +271,74 @@ html {
       overflow: hidden;
       &.click {
         width: 100%;
+      }
+    }
+
+@media only screen and (max-width: 720px) {
+  .container {
+    .landing-page {
+      margin: 0.3rem auto 0;
+      .text {
+        display: none;
+      }
+      .background-img {
+        img {
+          position: relative;
+          max-width: 98vw;
+          object-fit: cover;
+        }
+        .button-mobile {
+          display: block;
+          position: absolute;
+          top: 60%;
+          left: 39vw;
+        }
+      }
+    }
+
+    nav {
+      margin: 0 0.3rem;
+      max-width: 100vw;
+      .team-name {
+        display: none;
+      }
+      .links {
+        margin: 0 auto;
+      }
+    }
+    #visual-code {
+      margin: 0 0.3rem;
+      .code-img {
+        display: none;
+      }
+      .fetch-result {
+        width: 100%;
+      }
+    }
+    footer {
+      margin: 0 0.3rem;
+      max-width: 100vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .landing-page {
+    margin: 0.3rem auto 0;
+    .text {
+      display: none;
+    }
+    .background-img {
+      img {
+        position: relative;
+        max-width: 98vw;
+        object-fit: cover;
+      }
+      .button-mobile {
+        display: block;
+        position: absolute;
+        top: 60%;
+        left: 39vw;
       }
     }
   }

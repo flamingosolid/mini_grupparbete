@@ -38,6 +38,7 @@ const getFetch = () => {
 };
 
 getFetch();
+buttonPrev.disabled = true;
 
 const checkStatus = () => {
   if (count > 1) {
@@ -79,4 +80,6 @@ personBild.forEach((person) => {
   });
 });
 
-//Team Stop
+// const randomLandingPageColor = () => {
+//   const randomNum = Math.ceil(Math.random() * 3);
+// };
