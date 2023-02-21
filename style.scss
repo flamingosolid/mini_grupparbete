@@ -46,6 +46,7 @@ html {
   }
 
   nav {
+
     margin: 0 0.3rem;
     max-width: 100vw;
     .team-name {
@@ -78,6 +79,7 @@ html {
 
   nav {
     z-index: 999;
+
     grid-area: nav;
     background: rgba(0, 0, 0, 0.5);
     height: 50px;
@@ -133,7 +135,7 @@ html {
     align-items: center;
     .code-img {
       height: 100vh;
-      width: 50%;
+      width: 50vw;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -149,13 +151,13 @@ html {
 
     .fetch-result {
       height: 100vh;
-      width: 50%;
+      width: 50vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: #bbe4e9;
-      .character h1 {
+      .character h2 {
         color: #5585b5;
         font-family: Lucida Sans Typewriter;
       }
@@ -187,6 +189,9 @@ html {
           border-radius: 5px;
           font-size: 1.1rem;
           font-family: Comic Sans MS;
+        }
+        .showCode {
+          display: none;
         }
       }
       .info {
@@ -285,6 +290,7 @@ html {
   }
 }
 
+
 @media only screen and (max-width: 720px) {
   .container {
     #landing-page {
@@ -307,6 +313,22 @@ html {
       }
     }
 
+
+#code-img2 {
+  grid-area: code2;
+  display: none;
+}
+
+@media only screen and (max-width: 720px) {
+  .container {
+    grid-template-areas:
+      "l-page"
+      "nav"
+      "code"
+      "code2"
+      "team-p"
+      "footer";
+
     nav {
       margin: 0 0.3rem;
       max-width: 100vw;
@@ -318,17 +340,48 @@ html {
       }
     }
     #visual-code {
-      margin: 0 0.3rem;
       .code-img {
         display: none;
       }
       .fetch-result {
         width: 100%;
+        .buttons {
+          .prev {
+            font-size: 0.8rem;
+          }
+          .next {
+            font-size: 0.8rem;
+          }
+          .showCode {
+            display: block;
+            background-color: blue;
+            color: White;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: Comic Sans MS;
+          }
+        }
       }
     }
-    footer {
-      margin: 0 0.3rem;
-      max-width: 100vw;
+    #code-img2 {
+      background-color: #79c2d0;
+      display: block;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      .box {
+        height: 400px;
+        width: 400px;
+        img {
+          width: 100%;
+        }
+      }
     }
 
     #team-p {
