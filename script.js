@@ -21,7 +21,7 @@ const getFetch = () => {
     .then((response) => response.json())
     .then((person) => {
       character.innerHTML = `
-      <h1>${person.name}</h1>
+      <h2>${person.name}</h2>
       `;
       const image = document.createElement("img");
       image.src = person.image;
