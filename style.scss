@@ -14,8 +14,8 @@ html {
   grid-template-areas:
     "l-page"
     "nav"
-    "team-p"
     "code"
+    "team-p"
     "footer";
 
   #landing-page {
@@ -75,6 +75,7 @@ html {
   }
 
   nav {
+    z-index: 999;
     grid-area: nav;
     background: rgba(0, 0, 0, 0.5);
     height: 50px;
@@ -85,6 +86,7 @@ html {
     color: white;
     position: sticky;
     top: 0;
+    z-index: 1;
   }
 
   .team-name {
@@ -114,7 +116,8 @@ html {
 
   #team-p {
     grid-area: team-p;
-    background-color: #0fd197;
+    background-color: #430e2f;
+    height: 100vh;
   }
   #visual-code {
     grid-area: code;
@@ -266,7 +269,7 @@ html {
       position: absolute;
       left: 0;
       border-radius: 10px;
-      background-color: rgba(143, 25, 4, 0.822);
+      background-color: #7cbc6c;
       transition: all 1s ease-in-out;
       overflow: hidden;
       &.click {
