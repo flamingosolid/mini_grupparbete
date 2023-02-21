@@ -20,17 +20,16 @@ html {
 
   #landing-page {
     grid-area: l-page;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     .text {
-      height: 100vh;
-      background-color: #61133a;
-      margin: 0 auto;
-      width: 50vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 100vh;
+      background-color: #61133a;
+      margin: 0 auto;
+      width: 50vw;
       color: #7cbc6c;
       text-shadow: 0px 2px 5px #69ad53;
     }
@@ -61,6 +60,9 @@ html {
     .code-img {
       h1 {
         text-align: center;
+      }
+      img {
+        object-fit: cover;
       }
     }
     .fetch-result {
@@ -118,6 +120,10 @@ html {
     grid-area: team-p;
     background-color: #430e2f;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   #visual-code {
     grid-area: code;
@@ -250,7 +256,7 @@ html {
   display: flex;
   justify-content: space-between;
   max-width: 100%;
-  padding: 25vh 2rem;
+  padding: 0 2rem;
   overflow: hidden;
   .person {
     position: relative;
@@ -278,9 +284,10 @@ html {
     }
   }
 }
+
 @media only screen and (max-width: 720px) {
   .container {
-    .landing-page {
+    #landing-page {
       margin: 0.3rem auto 0;
       .text {
         display: none;
@@ -288,14 +295,14 @@ html {
       .background-img {
         img {
           position: relative;
-          max-width: 98vw;
+          width: 98vw;
           object-fit: cover;
         }
         .button-mobile {
           display: block;
           position: absolute;
-          top: 60%;
-          left: 39vw;
+          top: 80%;
+          left: 40vw;
         }
       }
     }
@@ -323,26 +330,17 @@ html {
       margin: 0 0.3rem;
       max-width: 100vw;
     }
-  }
-}
 
-@media only screen and (max-width: 420px) {
-  .landing-page {
-    margin: 0.3rem auto 0;
-    .text {
-      display: none;
-    }
-    .background-img {
-      img {
-        position: relative;
-        max-width: 98vw;
-        object-fit: cover;
-      }
-      .button-mobile {
-        display: block;
-        position: absolute;
-        top: 60%;
-        left: 39vw;
+    #team-p {
+      margin: 0 0.3rem;
+      width: 98vw;
+      .name {
+        flex-direction: column;
+        gap: 2rem;
+        .person {
+          width: 60vw;
+          margin: 0 auto;
+        }
       }
     }
   }
