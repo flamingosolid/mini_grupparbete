@@ -38,6 +38,7 @@ const getFetch = () => {
 };
 
 getFetch();
+buttonPrev.disabled = true;
 
 const checkStatus = () => {
   if (count > 1) {
