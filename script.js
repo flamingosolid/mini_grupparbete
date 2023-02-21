@@ -90,3 +90,7 @@ greybox2.addEventListener("click", function () {
 greybox3.addEventListener("click", function () {
   greybox3.classList.toggle("click");
 });
+
+const randomLandingPageColor = () => {
+  const randomNum = Math.ceil(Math.random() * 3);
+};
