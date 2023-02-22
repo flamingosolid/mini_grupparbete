@@ -157,10 +157,8 @@ html {
     .code-img {
       height: 100vh;
       width: $widthHalfPage;
-
       height: $pageHeight;
       width: 50vw;
-
       display: flex;
       justify-content: center;
       align-items: center;
@@ -188,11 +186,8 @@ html {
       background-color: $fetchPageColor;
       .character h1 {
         color: $codePageColor;
-
-        font-size: 60px;
-
+        font-size: 30px;
         font-family: "Press Start 2P", cursive;
-        
       }
       .image img {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
@@ -215,14 +210,12 @@ html {
           color: $linkColor;
           font-size: 0.7rem;
           height: 50px;
-
           font-family: "Press Start 2P", cursive;
           &:hover {
             background-color: #49ff18;
             color: $codePageColor;
             transition: 0.6s ease-in-out;
           }
-
         }
         .prev {
           padding: 0.5rem 1rem;
@@ -239,7 +232,6 @@ html {
             color: $codePageColor;
             transition: 0.6s ease-in-out;
           }
-
         }
         .showCode {
           display: none;
@@ -355,6 +347,22 @@ html {
   display: none;
 }
 
+.scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 2rem;
+  border: none;
+  background-color: #7cbc6c;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 10px;
+  transform: translateY(0);
+  transition: 1s;
+}
+
 @media only screen and (max-width: 720px) {
   .container {
     grid-template-areas:
@@ -425,6 +433,11 @@ html {
             border-radius: 5px;
             text-decoration: none;
             text-align: center;
+            &:hover {
+              background-color: #49ff18;
+              color: $codePageColor;
+              transition: 0.6s ease-in-out;
+            }
           }
         }
       }
