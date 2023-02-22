@@ -87,8 +87,8 @@ window.onscroll = function () {
 
 const scrollFunction = () => {
   if (
-    document.body.scrollTop > 1000 ||
-    document.documentElement.scrollTop > 1000
+    document.body.scrollTop > 1400 ||
+    document.documentElement.scrollTop > 1400
   ) {
     scrollToTopBtn.style.display = "block";
   } else {
