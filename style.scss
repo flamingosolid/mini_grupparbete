@@ -33,11 +33,12 @@ $pageHeight: 100vh;
 }
 
 body {
+  font-family: "Schoolbell", cursive;
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
   overflow: hidden;
+  width: $widthFullPage;
 }
 
 html {
@@ -101,7 +102,7 @@ html {
 
   nav {
     grid-area: nav;
-    background: rgba(145, 46, 46, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     height: 50px;
     display: grid;
     grid-auto-flow: column;
@@ -120,7 +121,6 @@ html {
   }
 
   .links a {
-    font-family: "Press Start 2P", cursive;
     text-decoration: none;
     transition: ease-in-out 0.3s;
 
@@ -188,8 +188,11 @@ html {
       background-color: $fetchPageColor;
       .character h1 {
         color: $codePageColor;
+
+        font-size: 60px;
+
         font-family: "Press Start 2P", cursive;
-        font-size: 30px;
+        
       }
       .image img {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
@@ -203,6 +206,7 @@ html {
         justify-content: center;
         flex-wrap: wrap;
         gap: 1rem;
+
         .next {
           padding: 0.5rem 1rem;
           cursor: pointer;
@@ -211,12 +215,14 @@ html {
           color: $linkColor;
           font-size: 0.7rem;
           height: 50px;
+
           font-family: "Press Start 2P", cursive;
           &:hover {
             background-color: #49ff18;
             color: $codePageColor;
             transition: 0.6s ease-in-out;
           }
+
         }
         .prev {
           padding: 0.5rem 1rem;
@@ -226,12 +232,14 @@ html {
           border: none;
           font-size: 0.7rem;
           height: 50px;
+
           font-family: "Press Start 2P", cursive;
           &:hover {
             background-color: #49ff18;
             color: $codePageColor;
             transition: 0.6s ease-in-out;
           }
+
         }
         .showCode {
           display: none;
@@ -251,7 +259,7 @@ html {
   footer {
     font-family: "Libre Barcode 39", cursive;
     grid-area: footer;
-    background: rgba(145, 46, 46, 0.5);
+    background: rgba(145, 46, 46, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -269,6 +277,15 @@ html {
   }
 
   .button-33,
+  .button-mobile,
+  .links a,
+  .prev,
+  .next,
+  .showCode {
+    font-family: "Press Start 2P", cursive;
+  }
+
+  .button-33,
   .button-mobile {
     background-color: #1098b9;
     box-shadow: rgba(14, 221, 93, 0.315) 0 -25px 18px -14px inset,
@@ -278,7 +295,6 @@ html {
     color: 7cbc6c;
     cursor: pointer;
     display: inline-block;
-    font-family: "Press Start 2P", cursive;
     padding: 7px 20px;
     text-align: center;
     text-decoration: none;
@@ -363,7 +379,7 @@ html {
           display: block;
           position: absolute;
           top: 80%;
-          left: 40vw;
+          left: 28vw;
         }
       }
     }
@@ -408,7 +424,6 @@ html {
             padding: 1rem 1.5rem;
             border-radius: 5px;
             text-decoration: none;
-            font-family: Comic Sans MS;
             text-align: center;
           }
         }
