@@ -332,7 +332,6 @@ html {
 
     img {
       width: 100%;
-      height: 100%;
       border-radius: 10px;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
         rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -343,7 +342,6 @@ html {
       top: 0;
       left: 0;
       width: 0%;
-      position: absolute;
       left: 0;
       border-radius: 10px;
       transition: all 1s ease-in-out;
@@ -355,6 +353,9 @@ html {
       cursor: pointer;
       &.click {
         width: 100%;
+        p {
+          padding: 0 5px;
+        }
       }
     }
   }
@@ -379,6 +380,22 @@ html {
   border-radius: 10px;
   transform: translateY(0);
   transition: 1s;
+}
+
+@media only screen and (max-width: 1250px) {
+  .name {
+    .person {
+      padding: 0;
+      .greybox {
+        h2 {
+          font-size: 0.8rem;
+        }
+        p {
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -470,6 +487,7 @@ html {
           }
           p {
             font-size: 10px;
+            padding: 0 20px;
           }
         }
       }
