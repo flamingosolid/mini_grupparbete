@@ -46,12 +46,6 @@ const checkStatus = () => {
   } else {
     buttonPrev.disabled = true;
   }
-
-  if (count === maxNumber) {
-    buttonNext.disabled = true;
-  } else {
-    buttonNext.disabled = false;
-  }
 };
 
 buttonNext.onclick = () => {

@@ -329,11 +329,14 @@ html {
   .person {
     position: relative;
     width: 30%;
+
     img {
       width: 100%;
+      height: 100%;
       border-radius: 10px;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
         rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      cursor: pointer;
     }
     .greybox {
       position: absolute;
@@ -343,11 +346,13 @@ html {
       position: absolute;
       left: 0;
       border-radius: 10px;
-      background-color: #7cbc6c;
       transition: all 1s ease-in-out;
       overflow: hidden;
       height: 100%;
       text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      cursor: pointer;
       &.click {
         width: 100%;
       }
@@ -452,6 +457,19 @@ html {
               color: $codePageColor;
               transition: 0.6s ease-in-out;
             }
+          }
+        }
+      }
+    }
+    .name {
+      .person {
+        padding: 0;
+        .greybox {
+          h2 {
+            font-size: 15px;
+          }
+          p {
+            font-size: 10px;
           }
         }
       }
