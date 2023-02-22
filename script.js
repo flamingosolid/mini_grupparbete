@@ -79,3 +79,26 @@ personBild.forEach((person) => {
     greyBox.classList.toggle("click");
   });
 });
+
+const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+window.onscroll = function () {
+  scrollFunction();
+};
+
+const scrollFunction = () => {
+  if (
+    document.body.scrollTop > 1000 ||
+    document.documentElement.scrollTop > 1000
+  ) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+};
+
+const topFunction = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+
+scrollToTopBtn.onclick = topFunction;
