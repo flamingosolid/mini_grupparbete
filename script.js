@@ -79,7 +79,3 @@ personBild.forEach((person) => {
     greyBox.classList.toggle("click");
   });
 });
-
-// const randomLandingPageColor = () => {
-//   const randomNum = Math.ceil(Math.random() * 3);
-// };
