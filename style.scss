@@ -221,7 +221,7 @@ html {
           &:hover {
             background-color: #49ff18;
             color: $codePageColor;
-            transition: 0.6s ease-in-out;
+            transition: 0.5s ease-in-out;
           }
         }
         .prev {
@@ -237,7 +237,7 @@ html {
           &:hover {
             background-color: #49ff18;
             color: $codePageColor;
-            transition: 0.6s ease-in-out;
+            transition: 0.5s ease-in-out;
           }
         }
         .showCode {
@@ -446,7 +446,7 @@ html {
             border-radius: 5px;
             text-decoration: none;
             text-align: center;
-             height: 35px;
+            height: 35px;
             &:hover {
               background-color: #49ff18;
               color: $codePageColor;
