@@ -29,9 +29,9 @@ const getFetch = () => {
 
       characterInfo.innerHTML = `
     <ul>
-    <li>Status: ${person.status}</li>
-    <li>Species: ${person.species}</li>
-    <li>Gender: ${person.gender}</li>
+    <li><span>Status:</span> ${person.status}</li>
+    <li><span>Species:</span> ${person.species}</li>
+    <li><span>Gender:</span> ${person.gender}</li>
     </ul>
     `;
     });
