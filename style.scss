@@ -1,14 +1,9 @@
 $landingPageColor: #61133a;
 $linkColor: white;
 $codePageColor: #54877a;
-
+$fetchPageColor: #3fe8b2;
 $widthFullPage: 100vw;
 $widthHalfPage: 50vw;
-
-body {
-  margin: 0;
-  width: $widthFullPage;
-
 $fetchPageColor: #3fe8b2;
 $pageHeight: 100vh;
 
@@ -135,7 +130,6 @@ html {
     font-size: 1.8rem;
     color: $linkColor;
 
-
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
       0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
     color: $linkColor;
@@ -161,7 +155,6 @@ html {
     justify-content: center;
     align-items: center;
     .code-img {
-
       height: 100vh;
       width: $widthHalfPage;
 
@@ -182,7 +175,6 @@ html {
     }
 
     .fetch-result {
-
       height: 100vh;
       width: $widthHalfPage;
 
@@ -196,8 +188,8 @@ html {
       background-color: $fetchPageColor;
       .character h1 {
         color: $codePageColor;
-        font-family: Lucida Sans Typewriter;
-        font-size: 40px;
+        font-family: "Press Start 2P", cursive;
+        font-size: 30px;
       }
       .image img {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
@@ -217,8 +209,14 @@ html {
           background-color: $codePageColor;
           border: none;
           color: $linkColor;
-          font-size: 1rem;
-          font-family: Comic Sans MS;
+          font-size: 0.7rem;
+          height: 50px;
+          font-family: "Press Start 2P", cursive;
+          &:hover {
+            background-color: #49ff18;
+            color: $codePageColor;
+            transition: 0.6s ease-in-out;
+          }
         }
         .prev {
           padding: 0.5rem 1rem;
@@ -226,8 +224,14 @@ html {
           background-color: #82ad8d;
           color: $linkColor;
           border: none;
-          font-size: 1.1rem;
-          font-family: Comic Sans MS;
+          font-size: 0.7rem;
+          height: 50px;
+          font-family: "Press Start 2P", cursive;
+          &:hover {
+            background-color: #49ff18;
+            color: $codePageColor;
+            transition: 0.6s ease-in-out;
+          }
         }
         .showCode {
           display: none;
